@@ -5,6 +5,7 @@ public class Player{
     public int[] position;
     private Hashtable<Item, Integer> inventory;
     private int inventorySize;
+    //TODO: Make undo function and allat
 
     // Constructor
     public Player(String name){
@@ -74,6 +75,6 @@ public class Player{
      */
     public void startTask(Task task){}
 
-    
+    // TODO: Teleport function
     
 }
