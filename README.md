@@ -2,7 +2,7 @@
 
 ***This is Gaim***
 <br>
-**Authors:** *@mich5250 & @Arogya-Adhikari*
+**Authors:** *@mich5250 & @Arogya*
 <br><br>
 An escape room game made with Java Object-Oriented Programming. In this game, you are in a hellish world. You must find your way out before it's too late (i.e you die). Random things deplete your life and you don't know what they are. Be careful, be cautious, and be smart.
 <br><br>
