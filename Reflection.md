@@ -1,0 +1,4 @@
+**Dec 4, 2022**
+<p>As of today, Arogya and I have come up with a map for the game, aflow and all the various classes that we need to implement through an architecture diagram. We have been appending the code accrodingly to mach the designs we made on paper. So far, I would say most of the classes in their individuality have been pretty well defined in our code. So after finishing up the rest of the classes, we will start workingon the Main file to design the code for the actual flow of the game.</p>
+<p> One thing that was striking to me was the fact that Java didn't have a Graph class already defined. But I could still find out how to implement a Graph in javaby looing online. This way, we could use the Graph class to implement the map of the game world instead of a grid system, as we believed that would be difficult for the player to navigate. </p>
+<p>~ Michelle.</p> 
