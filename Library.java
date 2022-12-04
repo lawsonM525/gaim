@@ -5,18 +5,18 @@ public class Library extends Building {
     private java.util.Hashtable<String, Boolean> collection;
     private Boolean hasElevator;
 
-    /* Overloaded constructor with address only */
-    public Library(String address) {
-      super(address);
+    /* Overloaded constructor with definition only */
+    public Library(String definition) {
+      super(definition);
     }
     /** 
      *  Constructor for Library class
      *  @param name Name of the Library
-     *  @param address Location of the library
+     *  @param definition Location of the library
      *  @param nFloors Number of floors in the library
      */
-    public Library(String name, String address, int nFloors, Boolean hE) {
-      super(name, address, nFloors);//parent constructor
+    public Library(String name, String definition, int nFloors, Boolean hE) {
+      super(name, definition, nFloors);//parent constructor
       this.collection = new Hashtable<String, Boolean>();
       this.hasElevator = hE;
       System.out.println("You have built a library: 📖");

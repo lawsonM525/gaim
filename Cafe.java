@@ -8,8 +8,8 @@ public class Cafe extends Building {
     private int nCreams; // The number of "splashes" of cream remaining in inventory
     private int nCups; // The number of cups remaining in inventory
 
-    public Cafe(String name, String address, int nFloors, int nCoffeeOunces, int nSugarPackets, int nCreams, int nCups) {
-        super(name, address, nFloors);
+    public Cafe(String name, String definition, int nFloors, int nCoffeeOunces, int nSugarPackets, int nCreams, int nCups) {
+        super(name, definition, nFloors);
         this.nCoffeeOunces = nCoffeeOunces;
         this.nSugarPackets = nSugarPackets;
         this.nCreams = nCreams;

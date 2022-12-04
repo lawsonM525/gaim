@@ -4,30 +4,30 @@ import javax.management.RuntimeErrorException;
 public class Building {
 
     protected String name;
-    protected String address;
+    protected String definition;
     protected int nFloors;
     protected int activeFloor = -1; // Default value indicating we are not inside this building
 
     /* Default constructor */
     public Building() {
-        this("<Name Unknown>", "<Address Unknown>", 1);
+        this("<Name Unknown>", "<Definition Unknown>", 1);
     }
 
-    /* Overloaded constructor with address only */
-    public Building(String address) {
+    /* Overloaded constructor with definition only */
+    public Building(String definition) {
         this(); // Call default constructor
-        this.address = address; // Override address
+        this.definition = definition; // Override definition
     }
 
-    /* Overloaded constructor with name, address */
-    public Building(String name, String address) {
-        this(name, address, 1); // Call full constructor with hard-coded # floors
+    /* Overloaded constructor with name, definition */
+    public Building(String name, String definition) {
+        this(name, definition, 1); // Call full constructor with hard-coded # floors
     }
 
     /* Full constructor */
-    public Building(String name, String address, int nFloors) {
+    public Building(String name, String definition, int nFloors) {
         if (name != null) { this.name = name; }
-        if (address != null) { this.address = address; } 
+        if (definition != null) { this.definition = definition; } 
         if (nFloors < 1) {
             throw new RuntimeException("Cannot construct a building with fewer than 1 floor.");
         }
@@ -39,8 +39,8 @@ public class Building {
         return this.name;
     }
 
-    public String getAddress() {
-        return this.address;
+    public String getDefinition() {
+        return this.definition;
     }
 
     public int getFloors() {
@@ -93,7 +93,7 @@ public class Building {
     }
 
     public String toString() {
-        return this.name + " is a " + this.nFloors + "-story building located at " + this.address + ".";
+        return this.name + " is a " + this.nFloors + "-story building located at " + this.definition + ".";
     }
 
     public static void main(String[] args) {

@@ -6,21 +6,21 @@ public class House extends Building {
     private Boolean hasDiningRoom;
     private Boolean hasElevator;
 
-    /* Overloaded constructor with address only */
-    public House(String address) {
-      super(address);
+    /* Overloaded constructor with definition only */
+    public House(String definition) {
+      super(definition);
     }
 
     /** 
      *  Constructor for House Building
      *  @param name Name of the House
-     *  @param address Location of the House
+     *  @param definition Location of the House
      *  @param nFloors Number of Floors in the house
      *  @param hDR Whether or not the house has a dining room
      *  @param hE Whether or not the house has an elevator
      */
-    public House(String name, String address, int nFloors, Boolean hDR, Boolean hE) {
-      super(name, address, nFloors);
+    public House(String name, String definition, int nFloors, Boolean hDR, Boolean hE) {
+      super(name, definition, nFloors);
       this.residents = new ArrayList<String>();
       this.hasDiningRoom = hDR;
       this.hasElevator = hE;
