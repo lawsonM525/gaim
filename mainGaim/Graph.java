@@ -1,3 +1,4 @@
+package mainGaim;
 //https://www.geeksforgeeks.org/implementing-generic-graph-in-java/
 // Article by @ritz7 and @solankimayank
 // Accessed Dec 4, 2022

@@ -1,3 +1,4 @@
+package mainGaim;
 import javax.management.RuntimeErrorException;
 
 /* Building clas defines all buildings in a World */

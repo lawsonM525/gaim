@@ -1,3 +1,4 @@
+package mainGaim;
 import java.util.regex.MatchResult;
 
 /* Cafe Building for selling and buying cofeee */

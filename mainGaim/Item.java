@@ -1,3 +1,4 @@
+package mainGaim;
 public class Item {
     public String name;
 

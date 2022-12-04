@@ -1,3 +1,4 @@
+package mainGaim;
 public class Main {
     public static void main(String[] args) {
         
@@ -26,7 +27,7 @@ public class Main {
         world.connectBuildings(frogCafe, devilLake);
         // TODO: create function to print visual map of world
 
-        
+
 
 
     }

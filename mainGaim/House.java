@@ -1,3 +1,4 @@
+package mainGaim;
 import java.util.ArrayList;
 /* House class defines houses within the world */
 public class House extends Building {

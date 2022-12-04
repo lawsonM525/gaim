@@ -1,3 +1,4 @@
+package mainGaim;
 import java.util.Hashtable;
 /* Player is a person who plays the game. */
 public class Player{

@@ -1,3 +1,4 @@
+package mainGaim;
 
 import java.util.Hashtable;
 /* Library class: Building to store and take books from */

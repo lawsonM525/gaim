@@ -1,3 +1,4 @@
+package mainGaim;
 import java.util.ArrayList;
 /** World classdefines world map and buildings in the world */
 public class World {
