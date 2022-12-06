@@ -1,4 +1,6 @@
 package mainGaim;
+import java.util.ArrayList;
+import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
         
@@ -26,6 +28,24 @@ public class Main {
         world.connectBuildings(hauntedHouse, frogCafe);
         world.connectBuildings(frogCafe, devilLake);
         // TODO: create function to print visual map of world
+
+
+        //Creating our player
+
+        //Taking input for player name
+        Scanner input = new Scanner(System.in);
+        System.out.println("What is your name?");
+        String name = input.nextLine();
+        Player player = new Player(name, center);
+
+
+        //Game begins
+        
+        //TODO: create timer to start game
+        System.out.println("Welcome to the Nightmare Land!");
+        System.out.println("You are in the center of the land. Look through your cheatsheet to find commands you can use to explore the land.");
+        System.out.println("You have 5 minutes to find the exit and escape. The clock is ticking! ");
+
 
 
 
