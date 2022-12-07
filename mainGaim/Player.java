@@ -3,15 +3,15 @@ import java.util.Hashtable;
 /* Player is a person who plays the game. */
 public class Player{
     public String name;
-    public int[] position;
+    public Building position;
     private Hashtable<Item, Integer> inventory;
     private int inventorySize;
     //TODO: Make undo function and allat
 
     // Constructor
-    public Player(String name){
+    public Player(String name, Building position){
         this.name = name;
-        this.position = new int [0,0];
+        this.position = position;
         this.inventory = new Hashtable<Item, Integer>();
         this.inventorySize = 0;
         System.out.println("Player created");
@@ -76,6 +76,14 @@ public class Player{
      */
     public void startTask(Task task){}
 
-    // TODO: Teleport function
+    /**
+     * Moves player from one building to another
+     * @param building to move to
+     */
+    public void move(Building building){
+        this.position = building;
+    }
+    
+
     
 }
