@@ -12,6 +12,38 @@ public class Main {
     public static Building devilLake;
     public static House hauntedHouse;
     public static Cafe frogCafe;
+    public Player player;
+
+    /**
+     * Moves player from one building to another within the game's world
+     * @param building to move to
+     */
+    public static void move(int destination, Player player){
+        if (destination == 1){
+            player.position = center;
+            System.out.println(player.position.toString());
+        }
+        else if (destination == 2){
+            player.position = lostLibrary;
+            System.out.println(player.position.toString());
+        }
+        else if (destination == 3){
+            player.position = hauntedHouse;
+            System.out.println(player.position.toString());
+        }
+        else if (destination == 4){
+            player.position = frogCafe;
+            System.out.println(player.position.toString());
+        }
+        else if (destination == 5){
+            player.position = devilLake;
+            System.out.println(player.position.toString());
+        }
+        else{
+            System.out.println("Invalid input");
+        }
+
+    }
     public static void main(String[] args) {
         
         // DESIGNING OUR WORLD

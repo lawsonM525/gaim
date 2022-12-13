@@ -76,11 +76,13 @@ public class Commands {
                 break;
             case "move":
                 int moveTo = Integer.parseInt(commandArray[1]);
-                player.move(moveTo);
+                Main.move(moveTo, player);
                 break;
             case "inventory":
                 player.listInventory();
                 break;
+            case "where":
+                player.position.toString();
             default:
                 System.out.println("Invalid command. Try again.");
                 break;

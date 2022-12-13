@@ -36,9 +36,11 @@ public class Player{
             if (this.inventory.containsKey(item)){
                 this.inventory.put(item, this.inventory.get(item)+1);
                 this.inventorySize ++;
+                System.out.println(item.name + " has been added to your inventory");
             } else {
                 this.inventory.put(item, 1);
                 this.inventorySize ++;
+                System.out.println(item.name + " has been added to your inventory");
             }
         } else {
             System.out.println("Your inventory is full! Drop some items :)");
@@ -93,33 +95,36 @@ public class Player{
     // */
     //public void startTask(){}
 
-    /**
-     * Moves player from one building to another
-     * @param building to move to
-     */
-    public void move(int destination){
-        //TODO: Make move take in a number as a parameter, then that can be taken in with the command
-        if (destination == 1){
-            this.position = main.center;
-        }
-        if (destination == 2){
-            this.position = main.lostLibrary;
-        }
-        if (destination == 3){
-            this.position = main.hauntedHouse;
-        }
-        if (destination == 4){
-            this.position = main.frogCafe;
-        }
-        if (destination == 5){
-            this.position = main.devilLake;
-        }
-        else{
-            System.out.println("Invalid input");
-        }
+    // /**
+    //  * Moves player from one building to another
+    //  * @param destination to move to
+    //  */
+    // public void move(int destination){
+    //     if (destination == 1){
+    //         this.position = main.center;
+    //         System.out.println(this.position.toString());
+    //     }
+    //     else if (destination == 2){
+    //         this.position = main.lostLibrary;
+    //         System.out.println(this.position.toString());
+    //     }
+    //     else if (destination == 3){
+    //         this.position = main.hauntedHouse;
+    //         System.out.println(this.position.toString());
+    //     }
+    //     else if (destination == 4){
+    //         this.position = main.frogCafe;
+    //         System.out.println(this.position.toString());
+    //     }
+    //     else if (destination == 5){
+    //         this.position = main.devilLake;
+    //         System.out.println(this.position.toString());
+    //     }
+    //     else{
+    //         System.out.println("Invalid input");
+    //     }
 
-        insert.close();
-    }
+    // }
 
     public void move(Building building){
         this.position = building;
