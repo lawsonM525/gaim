@@ -28,6 +28,14 @@ public class Player{
     }
 
     /**
+     * Setter for position
+     * @param Building new position
+     */
+    public void setPosition(Building position){
+        this.position = position;
+    }
+
+    /**
      * Picks up item for inventory
      * @param item item to add to inventory
      */

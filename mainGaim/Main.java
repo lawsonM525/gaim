@@ -14,6 +14,8 @@ public class Main {
     public static Cafe frogCafe;
     public Player player;
 
+    
+
     /**
      * Moves player from one building to another within the game's world
      * @param building to move to
@@ -24,7 +26,7 @@ public class Main {
             System.out.println(player.position.toString());
         }
         else if (destination == 2){
-            player.position = lostLibrary;
+            player.setPosition(lostLibrary);
             System.out.println(player.position.toString());
         }
         else if (destination == 3){
@@ -48,12 +50,12 @@ public class Main {
         
         // DESIGNING OUR WORLD
         //Creating world and its locations
-        World world = new World("Nightmare Land", new int[]{10,10});
-        Building center = new Building("Spunkoids", "Woodlands of the Spirits", 1);
-        Library lostLibrary = new Library("Lost Library", "Alibrary full of lost souls", 3, true);
-        Building devilLake = new Building("Lake of Devils", "A lake full of devils", 1);
-        House hauntedHouse = new House("Haunted House", "A tall house full of ghosts", 5, true, true);
-        Cafe frogCafe = new Cafe("Frog Cafe", "A cafe full of hoppity hoppities", 1, 50, 20, 300, 60);
+        world = new World("Nightmare Land", new int[]{10,10});
+        center = new Building("Spunkoids", "Woodlands of the Spirits", 1);
+        lostLibrary = new Library("Lost Library", "Alibrary full of lost souls", 3, true);
+        devilLake = new Building("Lake of Devils", "A lake full of devils", 1);
+        hauntedHouse = new House("Haunted House", "A tall house full of ghosts", 5, true, true);
+        frogCafe = new Cafe("Frog Cafe", "A cafe full of hoppity hoppities", 1, 50, 20, 300, 60);
         world.addBuilding(center);
         world.addBuilding(lostLibrary);
         world.addBuilding(devilLake);
