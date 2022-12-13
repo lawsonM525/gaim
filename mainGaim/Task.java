@@ -1,12 +1,12 @@
 package mainGaim;
 import java.util.Scanner;
 public class Task {
-    Scanner keyboard = new Scanner(System.in);
-    Scanner input = new Scanner(System.in);
+    public static Scanner keyboard = new Scanner(System.in);
+    public static Scanner input = new Scanner(System.in);
 
     //Creating a random number generator 
     //Task for the user to guess the random generated number
-    public void Task_1(){
+    public static void Task_1(Player player){
         int min = 1;
         int max = 9;
         int number = (int)(Math.random()*(max-min+1)+min);  
@@ -24,11 +24,11 @@ public class Task {
         }
         if(guess == number){
             System.out.println("Congrats you have passed the task. Here is your coin"); 
-            //Need to add coin to inventory
+            player.pickUp(new Item("coin", "A shiny coin"));
         } 
     }
 
-    public void Task_2(){
+    public static void Task_2(Player player){
         int min = 1;
         int max = 9;
         int number = (int)(Math.random()*(max-min+1)+min); 
@@ -99,7 +99,7 @@ public class Task {
         }
 
         System.out.println("Congrats on passing the task. Here is your coin");
-        //Add coin to the inventory
+        player.pickUp(new Item("coin", "A shiny coin"));
 
     }
 

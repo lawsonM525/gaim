@@ -1,5 +1,6 @@
 package mainGaim;
 import java.util.Hashtable;
+import java.util.Scanner;
 /* Player is a person who plays the game. */
 public class Player{
     public String name;
@@ -46,7 +47,21 @@ public class Player{
      * Drops item from inventory
      * @param item item to drop from inventory
      */
-    public void drop(String item){
+    public void drop(Item item){
+        if (this.inventory.containsKey(item)){
+            if (this.inventory.get(item) > 1){
+                this.inventory.put(item, this.inventory.get(item)-1);
+                this.inventorySize --;
+            } else {
+                this.inventory.remove(item);
+                this.inventorySize --;
+            }
+        } else {
+            System.out.println("You don't have that item in your inventory!");
+        }
+    }
+
+    public void useItem(Item item){
         if (this.inventory.containsKey(item)){
             if (this.inventory.get(item) > 1){
                 this.inventory.put(item, this.inventory.get(item)-1);
@@ -70,16 +85,22 @@ public class Player{
         }
     }
 
-    /**
-     * Starts a task if user meets requirements
-     * @param task task to be begun
-     */
-    public void startTask(Task task){}
+    ///**
+    // * Starts a task if user meets requirements
+    // * @param task task to be begun
+    // */
+    //public void startTask(){}
 
     /**
      * Moves player from one building to another
      * @param building to move to
      */
+    public void move(){
+        Scanner input = new Scanner(System.in);
+        System.out.println("Where would you like to move to?");
+        System.out.println("Still working on this function :)");
+        //TODO: Move player according to input
+    }
     public void move(Building building){
         this.position = building;
     }

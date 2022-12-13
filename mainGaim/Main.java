@@ -2,33 +2,35 @@ package mainGaim;
 import java.util.ArrayList;
 import java.util.Scanner;
 public class Main {
+    private static long timeStart;
+    private static long timeEnd;
+    private static long timeDelta;
+    private static long timeLimit;
     public static void main(String[] args) {
         
-        // Desiging our world
-
+        // DESIGNING OUR WORLD
         //Creating world and its locations
         World world = new World("Nightmare Land", new int[]{10,10});
         Building center = new Building("Spunkoids", "Woodlands of the Spirits", 1);
-        Library lostLbrary = new Library("Lost Library", "Alibrary full of lost souls", 3, true);
+        Library lostLibrary = new Library("Lost Library", "Alibrary full of lost souls", 3, true);
         Building devilLake = new Building("Lake of Devils", "A lake full of devils", 1);
         House hauntedHouse = new House("Haunted House", "A tall house full of ghosts", 5, true, true);
         Cafe frogCafe = new Cafe("Frog Cafe", "A cafe full of hoppity hoppities", 1, 50, 20, 300, 60);
         world.addBuilding(center);
-        world.addBuilding(lostLbrary);
+        world.addBuilding(lostLibrary);
         world.addBuilding(devilLake);
         world.addBuilding(hauntedHouse);
         world.addBuilding(frogCafe);
         //Connecting world locations
-        world.connectBuildings(center, lostLbrary);
+        world.connectBuildings(center, lostLibrary);
         world.connectBuildings(center, devilLake);
         world.connectBuildings(center, hauntedHouse);
         world.connectBuildings(center, frogCafe);
-        world.connectBuildings(lostLbrary, devilLake);
-        world.connectBuildings(lostLbrary, hauntedHouse);
+        world.connectBuildings(lostLibrary, devilLake);
+        world.connectBuildings(lostLibrary, hauntedHouse);
         world.connectBuildings(hauntedHouse, frogCafe);
         world.connectBuildings(frogCafe, devilLake);
         // TODO: create function to print visual map of world
-
 
         //Creating our player
 
@@ -39,12 +41,89 @@ public class Main {
         Player player = new Player(name, center);
 
 
-        //Game begins
+        //GAME BEGINS
         
         //TODO: create timer to start game
         System.out.println("Welcome to the Nightmare Land!");
         System.out.println("You are in the center of the land. Look through your cheatsheet to find commands you can use to explore the land.");
         System.out.println("You have 5 minutes to find the exit and escape. The clock is ticking! ");
+        long timeStart = System.nanoTime();
+
+        //While loop to determine whether or not user has escaped world
+        boolean outside = false;
+        boolean shutDown = false;
+
+        //Main game runs within this while loop
+        while ((!outside)&&(!shutDown)&&(timeDelta<timeLimit)) {
+            
+            Commands.call(input.nextLine(), player);
+
+            //Center of the world
+            if (player.position == center){
+                System.out.println("You are in Spunkoinds. The Woodlands of the Spirits.");
+                System.out.println("The great door to the exit is here. Can you open it?");
+            }
+
+            //Lost Library events
+            if (player.position == lostLibrary){
+                System.out.println("You are in the Lost Library. A library full of lost souls.");
+                System.out.println("This place is full of books and it befits a knowledge task.");
+                System.out.println("Would you like to complete the task to earn a coin?");
+                System.out.println("Type 'yes' or 'no' to answer.");
+                String answer = input.nextLine();
+                if ((answer.equals("yes"))||(answer.equals("Yes"))||(answer.equals("YES"))){
+                    Task.Task_1(player);
+                } else {
+                    System.out.println("You can proceed with exploring the world then.");
+                }
+            }
+
+            //Lake of Devils events
+            if (player.position = devilLake){
+                System.out.println("You are in the Lake of Devils. A lake full of devils.");
+                System.out.println("This place is full of water and it befits a task that gets you swimming through your mind.");
+                System.out.println("Would you like to complete the task to earn a coin?");
+                System.out.println("Type 'yes' or 'no' to answer.");
+                String answer = input.nextLine();
+                if ((answer.equals("yes"))||(answer.equals("Yes"))||(answer.equals("YES"))){
+                    Task.Task_2(player);
+                } else {
+                    System.out.println("You can proceed with exploring the world then.");
+                }
+            }
+
+            //Haunted House events
+            if (player.position == hauntedHouse){
+                System.out.println("You are in the Haunted House. A tall house full of ghosts.");
+                System.out.println("This place is full of ghosts and it befits a task that gets you thinking about the past.");
+                System.out.println("Would you like to complete the task to earn a coin?");
+                System.out.println("Type 'yes' or 'no' to answer.");
+                String answer = input.nextLine();
+                if ((answer.equals("yes"))||(answer.equals("Yes"))||(answer.equals("YES"))){
+                    Task.Task_1(player);
+                } else {
+                    System.out.println("You can proceed with exploring the world then.");
+                }
+            }
+
+            if (player.position == frogCafe){
+                System.out.println("You are in the Frog Cafe. A cafe full of hoppity hoppities.");
+                System.out.println("This place is full of frogs and has a *slightly* contaminated coffee bar.");
+                System.out.println("Would you like to make some coffee to increase your time?");
+                System.out.println("Type 'yes' or 'no' to answer.");
+                String answer = input.nextLine();
+                if ((answer.equals("yes"))||(answer.equals("Yes"))||(answer.equals("YES"))){
+                    frogCafe.makeCoffee(1);
+                } else {
+                    System.out.println("You can proceed with exploring the world then.");
+                }
+            }
+
+
+
+
+        }
+
 
 
 
