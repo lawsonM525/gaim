@@ -97,43 +97,6 @@ public class Player{
         }
     }
 
-    ///**
-    // * Starts a task if user meets requirements
-    // * @param task task to be begun
-    // */
-    //public void startTask(){}
-
-    // /**
-    //  * Moves player from one building to another
-    //  * @param destination to move to
-    //  */
-    // public void move(int destination){
-    //     if (destination == 1){
-    //         this.position = main.center;
-    //         System.out.println(this.position.toString());
-    //     }
-    //     else if (destination == 2){
-    //         this.position = main.lostLibrary;
-    //         System.out.println(this.position.toString());
-    //     }
-    //     else if (destination == 3){
-    //         this.position = main.hauntedHouse;
-    //         System.out.println(this.position.toString());
-    //     }
-    //     else if (destination == 4){
-    //         this.position = main.frogCafe;
-    //         System.out.println(this.position.toString());
-    //     }
-    //     else if (destination == 5){
-    //         this.position = main.devilLake;
-    //         System.out.println(this.position.toString());
-    //     }
-    //     else{
-    //         System.out.println("Invalid input");
-    //     }
-
-    // }
-
     public void move(Building building){
         this.position = building;
     }

@@ -1,6 +1,6 @@
 package mainGaim;
 import java.util.Scanner;
-
+import mainGaim.Main;
 
 
 
@@ -13,6 +13,7 @@ public class Commands {
     Cafe frogCafe = new Cafe("Frog Cafe", "A cafe full of hoppity hoppities", 1, 50, 20, 300, 60);
 
     public static void call(String command, Player player) {
+        Main main = new Main();
         Scanner input = new Scanner(System.in);
         String[] commandArray = command.split(" ");
         switch (commandArray[0]) {
@@ -81,8 +82,18 @@ public class Commands {
             case "inventory":
                 player.listInventory();
                 break;
-            case "where":
+            case "whereami":
                 player.position.toString();
+                break;
+            case "help":
+                System.out.println("Refer to cheatsheet.md for all commands");
+                break;
+            case "escape":
+                main.escape(player);
+            case "quit":
+                System.out.println("Thanks for playing!");
+                System.exit(0);
+                break;
             default:
                 System.out.println("Invalid command. Try again.");
                 break;

@@ -181,12 +181,10 @@ public class Main {
             }
 
             if(player.inventorySize > 2){
-                System.out.println("You have collected all the coins. Would you like to escape this world?");
+                System.out.println("You have quite a stuffed inventory. Would you like to attempt to escape this world?");
                 String answer = input.nextLine();
                 if ((answer.equals("yes"))||(answer.equals("Yes"))||(answer.equals("YES"))){
-                    System.out.println("Congrats! You have escaped the world");
-                    System.out.println("Thank you for playing our game :)");
-                    System.exit(0);
+                    escape(player);
                 }
                 else {
                 System.out.println("You can proceed with exploring the world then.");
@@ -196,6 +194,37 @@ public class Main {
         }
         input.close();
 
+    }
+
+    public static void escape(Player p){
+        if (p.position == center){
+            for (Item key : p.getInventory().keySet()) {
+                if (key.name.equals("Emerald coin")){
+                    for (Item key2 : p.getInventory().keySet()) {
+                        if (key2.name.equals("Ruby coin")){
+                            for (Item key3 : p.getInventory().keySet()) {
+                                if (key3.name.equals("Sapphire coin")){
+                                    System.out.println("You have successfully escaped the world!");
+                                    System.out.println("Thank you for playing our game :)");
+                                    System.exit(0);
+                                }
+                                else{
+                                    System.out.println("You are missing a Sapphire Coin needed to escape this world.");
+                                }
+                            }
+                        }
+                        else{
+                            System.out.println("You are missing a Ruby Coin needed to escape this world.");
+                        }
+                    }
+                } else{
+                    System.out.println("You are missing an Emerald Coin needed to escape this world.");
+                }
+            }
+        }
+        else{
+            System.out.println("You must be in Spunkoids (center of the world) to escape through the great exit door!");
+        }
     }
 }
 
