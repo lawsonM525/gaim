@@ -6,6 +6,12 @@ public class Main {
     private static long timeEnd;
     private static long timeDelta;
     private static long timeLimit;
+    public static World world;
+    public static Building center;
+    public static Library lostLibrary;
+    public static Building devilLake;
+    public static House hauntedHouse;
+    public static Cafe frogCafe;
     public static void main(String[] args) {
         
         // DESIGNING OUR WORLD
@@ -130,7 +136,11 @@ public class Main {
 
             // check if time limit has been reached
             if (timeDelta >= timeLimit) {
+                System.out.println("Time's up. You're stuck here forever. :(");
                 break;
+            }
+            else{
+                System.out.println("You have " + (timeLimit - timeDelta)/1000000000 + " seconds left.");
             }
 
 
