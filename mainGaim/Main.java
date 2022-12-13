@@ -118,6 +118,7 @@ public class Main {
                 String answer = input.nextLine();
                 if ((answer.equals("yes"))||(answer.equals("Yes"))||(answer.equals("YES"))){
                     Task.Task_3(player);
+                    player.listInventory();
                 } else {
                     System.out.println("You can proceed with exploring the world then.");
                 }
@@ -132,6 +133,7 @@ public class Main {
                 String answer = input.nextLine();
                 if ((answer.equals("yes"))||(answer.equals("Yes"))||(answer.equals("YES"))){
                     Task.Task_2(player);
+                    player.listInventory();
                 } else {
                     System.out.println("You can proceed with exploring the world then.");
                 }
@@ -146,6 +148,7 @@ public class Main {
                 String answer = input.nextLine();
                 if ((answer.equals("yes"))||(answer.equals("Yes"))||(answer.equals("YES"))){
                     Task.Task_1(player);
+                    player.listInventory();
                 } else {
                     System.out.println("You can proceed with exploring the world then.");
                 }
@@ -177,7 +180,19 @@ public class Main {
                 System.out.println("You have " + (timeLimit - timeDelta)/1000000000 + " seconds left.");
             }
 
+            if(player.inventorySize > 2){
+                System.out.println("You have collected all the coins. Would you like to escape this world?");
+                String answer = input.nextLine();
+                if ((answer.equals("yes"))||(answer.equals("Yes"))||(answer.equals("YES"))){
+                    System.out.println("Congrats! You have escaped the world");
+                    System.out.println("Thank you for playing our game :)");
+                    System.exit(0);
+                }
+                else {
+                System.out.println("You can proceed with exploring the world then.");
+            }
 
+            }
         }
         input.close();
 

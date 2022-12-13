@@ -7,7 +7,7 @@ public class Player{
     public String name;
     public Building position;
     private Hashtable<Item, Integer> inventory;
-    private int inventorySize;
+    int inventorySize;
     Main main = new Main();
     //TODO: Make undo function and allat
 

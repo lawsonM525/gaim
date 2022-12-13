@@ -24,7 +24,7 @@ public class Task {
         }
         if(guess == number){
             System.out.println("Congrats you have passed the task. Here is your coin"); 
-            player.pickUp(new Item("coin", "A shiny coin"));
+            player.pickUp(new Item("Emerald coin", "A shiny coin"));
         } 
     }
 
@@ -99,7 +99,7 @@ public class Task {
         }
 
         System.out.println("Congrats on passing the task. Here is your coin");
-        player.pickUp(new Item("coin", "A shiny coin"));
+        player.pickUp(new Item("Ruby coin", "A shiny coin"));
 
     }
 
@@ -121,7 +121,7 @@ public class Task {
         }
         if(answer == guess){
            System.out.println("Correct! Here is your coin");
-           player.pickUp(new Item("coin", "A shiny coin"));
+           player.pickUp(new Item("Sapphire coin", "A shiny coin"));
         }
     }
 
