@@ -106,25 +106,27 @@ public class Player{
         System.out.println("3. Haunted House");
         System.out.println("4. Frog Cafe");
         System.out.println("5. Lake of Devils");
-        int destination = input.nextInt();
-        if (destination == 1){
+        String destination = input.nextLine();
+        if (destination == "1"){
             this.position = main.center;
         }
-        if (destination == 2){
+        if (destination == "2"){
             this.position = main.lostLibrary;
         }
-        if (destination == 3){
+        if (destination == "3"){
             this.position = main.hauntedHouse;
         }
-        if (destination == 4){
+        if (destination == "4"){
             this.position = main.frogCafe;
         }
-        if (destination == 5){
-            this.position = main.lakeOfDevils;
+        if (destination == "5"){
+            this.position = main.devilLake;
         }
         else{
             System.out.println("Invalid input");
         }
+
+        input.close();
     }
 
     public void move(Building building){
