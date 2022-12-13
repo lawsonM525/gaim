@@ -30,10 +30,10 @@ public class Cafe extends Building {
      * Sells one cup of coffee and reduces coffee ounces accordingly
      * @param size size of coffee in relation to ounces
      */
-    public void sellCoffee(int size){
+    public void makeCoffee(int size){
         this.nCoffeeOunces -= size;
-        this.nSugarPackets -= nSugarPackets;
-        this.nCreams -= nCreams;
+        this.nSugarPackets -= 1;
+        this.nCreams -= 1;
         this.nCups -=1;
 
     }
@@ -43,7 +43,7 @@ public class Cafe extends Building {
      * @param size size of coffee in relation to ounces
      * @param nSugarPackets number of sugar packets used
      */
-    public void sellCoffee(int size, int nSugarPackets){
+    public void makeCoffee(int size, int nSugarPackets){
         this.nCoffeeOunces -= size;
         this.nSugarPackets -= nSugarPackets;
         this.nCreams -= nCreams;
@@ -57,7 +57,7 @@ public class Cafe extends Building {
      * @param nSugarPackets number of sugar packets used
      * @param nCreams number of creams used
      */
-    public void sellCoffee(int size, int nSugarPackets, int nCreams){
+    public void makeCoffee(int size, int nSugarPackets, int nCreams){
         this.nCoffeeOunces -= size;
         this.nSugarPackets -= nSugarPackets;
         this.nCreams -= nCreams;

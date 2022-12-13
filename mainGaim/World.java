@@ -11,6 +11,7 @@ public class World {
     public World(String name, int[] size){
         this.name = name;
         this.buildings = new ArrayList<Building>();
+        this.map = new Graph<Building>();
         System.out.println("The" + name+ " world has been created");
     }
 

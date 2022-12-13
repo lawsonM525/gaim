@@ -30,6 +30,7 @@ public class Main {
         world.connectBuildings(lostLibrary, hauntedHouse);
         world.connectBuildings(hauntedHouse, frogCafe);
         world.connectBuildings(frogCafe, devilLake);
+        System.out.println("World created successfully.");
         // TODO: create function to print visual map of world
 
         //Creating our player
@@ -44,17 +45,21 @@ public class Main {
         //GAME BEGINS
         
         //TODO: create timer to start game
-        System.out.println("Welcome to the Nightmare Land!");
+        System.out.println("Welcome to the Nightmare Land, "+ player.name+"!");
         System.out.println("You are in the center of the land. Look through your cheatsheet to find commands you can use to explore the land.");
         System.out.println("You have 5 minutes to find the exit and escape. The clock is ticking! ");
-        long timeStart = System.nanoTime();
+        timeStart = System.nanoTime();
 
         //While loop to determine whether or not user has escaped world
-        boolean outside = false;
+        boolean free = false;
         boolean shutDown = false;
 
         //Main game runs within this while loop
-        while ((!outside)&&(!shutDown)&&(timeDelta<timeLimit)) {
+        while ((!free)&&(!shutDown)) {
+            //Creating timer
+            timeEnd = System.nanoTime();
+            timeDelta = timeEnd - timeStart;
+            timeLimit = 180000000000L;//3 minutes as nano seconds
             
             Commands.call(input.nextLine(), player);
 
@@ -79,7 +84,7 @@ public class Main {
             }
 
             //Lake of Devils events
-            if (player.position = devilLake){
+            if (player.position == devilLake){
                 System.out.println("You are in the Lake of Devils. A lake full of devils.");
                 System.out.println("This place is full of water and it befits a task that gets you swimming through your mind.");
                 System.out.println("Would you like to complete the task to earn a coin?");
@@ -106,6 +111,7 @@ public class Main {
                 }
             }
 
+            //Frog Cafe events
             if (player.position == frogCafe){
                 System.out.println("You are in the Frog Cafe. A cafe full of hoppity hoppities.");
                 System.out.println("This place is full of frogs and has a *slightly* contaminated coffee bar.");
@@ -114,16 +120,22 @@ public class Main {
                 String answer = input.nextLine();
                 if ((answer.equals("yes"))||(answer.equals("Yes"))||(answer.equals("YES"))){
                     frogCafe.makeCoffee(1);
+                    Item Coffee;
+                    player.pickUp(Coffee = new Item("Coffee"));
+                    player.useItem(Coffee);
                 } else {
                     System.out.println("You can proceed with exploring the world then.");
                 }
             }
 
-
+            // check if time limit has been reached
+            if (timeDelta >= timeLimit) {
+                break;
+            }
 
 
         }
-
+        input.close();
 
 
 

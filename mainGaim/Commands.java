@@ -17,55 +17,58 @@ public class Commands {
         String[] commandArray = command.split(" ");
         switch (commandArray[0]) {
             case "take":
-                if (commandArray[1] == "stick"){
-                    player.pickUp(new Item("stick"));
-                }
-                else if (commandArray[1] == "rock"){
-                    player.pickUp(new Item("rock"));
-                }
-                else if (commandArray[1] == "key") {
-                    player.pickUp(new Item("key"));
+                if (commandArray[1] == "key") {
+                    Item key = new Item("key");
+                    player.pickUp(key);
                 }
                 else if (commandArray[1] == "potion") {
-                    player.pickUp(new Item("potion"));
+                    Item potion = new Item("potion");
+                    player.pickUp(potion);
+                    System.out.println("This potion does nothing hehe");
                 }
                 else if (commandArray[1] == "book") {
-                    player.pickUp(new Item("book"));
+                    Item book = new Item("book");
+                    player.pickUp(book);
+                    System.out.println("Unfortunately, you have no time to read");
                 }
                 else if (commandArray[1] == "map") {
-                    player.pickUp(new Item("map"));
+                    Item map = new Item("map");
+                    player.pickUp(map);
                 }
                 else if (commandArray[1] == "coffee"){
-                    player.pickUp(new Item("coffee"));
+                    Item coffee = new Item("coffee");
+                    player.pickUp(coffee);
                 }
                 else if (commandArray[1] == "coin"){
-                    player.pickUp(new Item("coin"));
+                    Item coin = new Item("coin");
+                    player.pickUp(coin);
                 }
                 break;
             case "drop":
-                if (commandArray[1] == "stick"){
-                    player.drop(new Item("stick"));
-                }
-                else if (commandArray[1] == "rock"){
-                    player.drop(new Item("rock"));
-                }
-                else if (commandArray[1] == "key") {
-                    player.drop(new Item("key"));
+                if (commandArray[1] == "key") {
+                    Item key = new Item("key");
+                    player.drop(key);
                 }
                 else if (commandArray[1] == "potion") {
-                    player.drop(new Item("potion"));
+                    Item potion = new Item("potion");
+                    player.drop(potion);
+                    System.out.println("That potion was useless anyway");
                 }
                 else if (commandArray[1] == "book") {
-                    player.drop(new Item("book"));
+                    Item book = new Item("book");
+                    player.drop(book);
                 }
                 else if (commandArray[1] == "map") {
-                    player.drop(new Item("map"));
+                    Item map = new Item("map");
+                    player.drop(map);
                 }
                 else if (commandArray[1] == "coffee"){
-                    player.drop(new Item("coffee"));
+                    Item coffee = new Item("coffee");
+                    player.drop(coffee);
                 }
                 else if (commandArray[1] == "coin"){
-                    player.drop(new Item("coin"));
+                    Item coin = new Item("coin");
+                    player.drop(coin);
                 }
                 else{
                     System.out.println("This is not a real item. Try again.");
