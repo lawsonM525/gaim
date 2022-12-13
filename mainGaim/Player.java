@@ -98,7 +98,9 @@ public class Player{
      * @param building to move to
      */
     public void move(){ 
-        Scanner input = new Scanner(System.in);
+        //TODO: Make move take in a number as a parameter, then that can be taken in with the command
+        //TODO: That way,the conditions use the number from the parameter, not the input (cuz it doesnt work)
+        Scanner insert = new Scanner(System.in);
         System.out.println("Where would you like to move to?");
         System.out.println("Choose a number");
         System.out.println("1. Spunkoids");
@@ -106,7 +108,7 @@ public class Player{
         System.out.println("3. Haunted House");
         System.out.println("4. Frog Cafe");
         System.out.println("5. Lake of Devils");
-        String destination = input.nextLine();
+        String destination = insert.nextLine();
         if (destination == "1"){
             this.position = main.center;
         }
@@ -126,7 +128,7 @@ public class Player{
             System.out.println("Invalid input");
         }
 
-        input.close();
+        insert.close();
     }
 
     public void move(Building building){
