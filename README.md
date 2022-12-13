@@ -8,5 +8,6 @@ An escape room game made with Java Object-Oriented Programming. In this game, yo
 <br><br>
 _A helpful tip_: Stay away from the red things.
 
+Reflections can be found in [Reflection.md](Reflection.md)
 
 <!-- Animation from @DenverCoder1 on Github -->
