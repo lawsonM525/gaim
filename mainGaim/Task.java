@@ -103,11 +103,28 @@ public class Task {
 
     }
 
+    public static void Task_3(Player player){    
+        // Math quiz game which generates random numbers to create random questions
+        int min = 10;
+        int max = 50;
+        int a = (int)(Math.random()*(max-min+1)+min); 
+        int b = (int)(Math.random()*(max-min+1)+min);
+        int c = (int)(Math.random()*(max-min+1)+min);
+        int answer = a * b + c;
+        int guess;
+        System.out.println("Solve the following problem to receive a coin.");
+        System.out.println(a + " * " + b + " + " + c);
+        guess = input.nextInt();
+        while(answer != guess){
+            System.out.println("Wrong! Try again");
+            guess = input.nextInt();
+        }
+        if(answer == guess){
+           System.out.println("Correct! Here is your coin");
+           player.pickUp(new Item("coin", "A shiny coin"));
+        }
+    }
 
-public static void main(String[] args) {
-        Task Guess = new Task();
-        Guess.Task_2();
-}
 }
 
 

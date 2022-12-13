@@ -117,7 +117,7 @@ public class Main {
                 System.out.println("Type 'yes' or 'no' to answer.");
                 String answer = input.nextLine();
                 if ((answer.equals("yes"))||(answer.equals("Yes"))||(answer.equals("YES"))){
-                    Task.Task_1(player);
+                    Task.Task_3(player);
                 } else {
                     System.out.println("You can proceed with exploring the world then.");
                 }
