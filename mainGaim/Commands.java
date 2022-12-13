@@ -75,7 +75,8 @@ public class Commands {
                 }
                 break;
             case "move":
-                player.move();
+                int moveTo = Integer.parseInt(commandArray[1]);
+                player.move(moveTo);
                 break;
             case "inventory":
                 player.listInventory();
