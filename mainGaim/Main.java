@@ -84,7 +84,6 @@ public class Main {
 
         //GAME BEGINS
         
-        //TODO: create timer to start game
         System.out.println("Welcome to the Nightmare Land, "+ player.name+"!");
         System.out.println("You are in the center of the land. Look through your cheatsheet to find commands you can use to explore the land.");
         System.out.println("You have 5 minutes to find the exit and escape. The clock is ticking! ");
