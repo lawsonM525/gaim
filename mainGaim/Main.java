@@ -195,6 +195,10 @@ public class Main {
 
     }
 
+    /**
+     * Method to check if player has all 3 coins and then escape the world
+     * @param pplayer player who would like to escape
+     */
     public static void escape(Player p){
         if (p.position == center){
             for (Item key : p.getInventory().keySet()) {

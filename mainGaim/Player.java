@@ -73,6 +73,10 @@ public class Player{
         }
     }
 
+    /**
+     * Uses up item within the inventory
+     * @param item item to be used
+     */
     public void useItem(Item item){
         if (this.inventory.containsKey(item)){
             if (this.inventory.get(item) > 1){
@@ -97,6 +101,10 @@ public class Player{
         }
     }
 
+    /**
+     * Moves player to a new building
+     * @param building building to move to
+     */
     public void move(Building building){
         this.position = building;
     }
