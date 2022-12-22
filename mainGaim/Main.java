@@ -162,9 +162,19 @@ public class Main {
                 String answer = input.nextLine();
                 if ((answer.equals("yes"))||(answer.equals("Yes"))||(answer.equals("YES"))){
                     frogCafe.makeCoffee(1);
-                    Item Coffee;
-                    player.pickUp(Coffee = new Item("Coffee"));
-                    player.useItem(Coffee);
+                    Item coffee;
+                    player.pickUp(coffee = new Item("Coffee"));
+                    System.out.println("You have picked up a cup of coffee.Would you like to drink it?");
+                    System.out.println("Type 'yes' or 'no' to answer.");
+                    String answer2 = input.nextLine();
+                    if ((answer2.equals("yes"))||(answer2.equals("Yes"))||(answer2.equals("YES"))){
+                        player.useItem(coffee);
+                        timeDelta = timeDelta - 20000000000L;
+                        System.out.println("You have increased your time by 20 seconds.");
+                    }
+                    else {
+                        System.out.println("You can proceed with exploring the world then.");
+                    }
                 } else {
                     System.out.println("You can proceed with exploring the world then.");
                 }
@@ -229,5 +239,6 @@ public class Main {
             System.out.println("You must be in Spunkoids (center of the world) to escape through the great exit door!");
         }
     }
+
 }
 

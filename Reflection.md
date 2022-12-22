@@ -16,5 +16,10 @@
 - need to make throw catch exceptions for when player inputs a string into places where an int is required (eg move command or Task 3)</p>
 <p>~Michelle</p>
 
+**Dec 21, 2022**
+_Final reflections_
 <p> This project was about creating a text based game through what we had learnt throught the semester from this course. I worked on this project with Michelle and we planned on making a text based adventure game in which the user must complete certain tasks which awards them with different types of coins which is needed to help them escape this world and win. To start with this prokject we first brainstormed for the outline of the game so we could create classes according to it. I mainly worked with the task class in which I created different tasks that the user needed complete in order to progress forward with the game. We decided that creating games such a guess the number, higher ang lower and a small mathematical equation would be a fun way to interact with the users. I also helped to create a way simple way for the user to exit the game by looking at the number of items in the inventory but it still had errors as dublicate items would also count to end the game.</p>
 <p>~Arogya</p>
+
+<p> I am glad we were able to complete the project and get the minor things working in the end. I would definitely like to build on it in the future. Ultimately, I was able to get the coffee to increase the amount of time players had by 20 seconds. We decided not to add the undo function to our code as it required extra coding and just did not seem necessary to the game. Overall, this was a generally successful project and I have learnt alot of java tricks while developing this *gaim*</p>
+<p>~Michelle</p>

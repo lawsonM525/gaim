@@ -83,6 +83,35 @@ public class Commands {
                 int moveTo = Integer.parseInt(commandArray[1]);
                 Main.move(moveTo, player);
                 break;
+            case "use":
+                if (commandArray[1] == "key") {
+                    Item key = new Item("key");
+                    player.useItem(key);
+                }
+                else if (commandArray[1] == "potion") {
+                    Item potion = new Item("potion");
+                    player.useItem(potion);
+                }
+                else if (commandArray[1] == "book") {
+                    Item book = new Item("book");
+                    player.useItem(book);
+                }
+                else if (commandArray[1] == "map") {
+                    Item map = new Item("map");
+                    player.useItem(map);
+                }
+                else if (commandArray[1] == "coffee"){
+                    Item coffee = new Item("coffee");
+                    player.useItem(coffee);
+                }
+                else if (commandArray[1] == "coin"){
+                    Item coin = new Item("coin");
+                    player.useItem(coin);
+                }
+                else{
+                    System.out.println("This is not a real item. Try again.");
+                }
+                break;
             case "inventory":
                 player.listInventory();
                 break;

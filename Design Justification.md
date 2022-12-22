@@ -11,10 +11,15 @@ The game also includes a variety of non-essential activities, such as visiting t
 
 Overall, the design of the game is intended to create a sense of progression and challenge for the player as they work towards their ultimate goal of escaping the Nightmare Land. The combination of task-based gameplay, collectible items, and non-essential activities creates a well-rounded and engaging experience for the player.
 
-**Alternative Design**
+**Alternative Designs**
 One alternative design that could have been used in the Main class is to create a separate class for handling the game timer. This design would involve creating a Timer class with methods such as startTimer, endTimer, and getTimeElapsed. The Main class could then instantiate a Timer object and use its methods to handle the game's time limit.
 
 This alternative design was not chosen because it would have added additional complexity to the code, as it would require creating and implementing a new class. Additionally, the current design of using a combination of timeStart, timeEnd, and timeDelta variables in the Main class is simple and effective in handling the game's time limit. It also takes advantage of Java's built-in System class. Using separate variables to track the start time, end time, and time elapsed is a straightforward approach that requires minimal additional code. As such, it was determined that the current design was a better choice for this game.
+
+An undo function was not included in this game is because it would significantly increase the complexity of the code and require additional resources such as memory and processing power to implement. Additionally, adding an undo function would also require the game to keep track of a large amount of previous states, which may not be necessary or practical in the context of this game.
+
+Another reason could be that the inclusion of an undo function would not necessarily enhance the gameplay experience or fit the overall theme and design of the game. The presence of an undo function could encourgae players to waste time undoing actions while they have a limited amount of time to complete the game.
+
 
 **Story & Narrative**
 The narrative of the game is centered around the player being trapped in a nightmare world and their goal is to escape by finding the exit. This adds a sense of urgency to the game and creates a clear objective for the player to work towards. The various buildings and locations in the game, such as the "Lost Library" and the "Haunted House," contribute to the overall atmosphere of the game being set in a nightmare world. The inclusion of tasks and challenges that the player must complete in order to progress through the game adds an element of gameplay and keeps the player engaged in the story. Overall, the story and narrative of the game effectively sets the tone and provides a clear goal for the player to work towards, adding to the overall enjoyment of the game.
