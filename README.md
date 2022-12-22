@@ -4,9 +4,9 @@
 <br>
 **Authors:** *@mich5250 & @Arogya*
 <br><br>
-An escape room game made with Java Object-Oriented Programming. In this game, you are in a hellish world. You must find your way out before it's too late (i.e you die). Random things deplete your life and you don't know what they are. Be careful, be cautious, and be smart.
+An escape room game made with Java Object-Oriented Programming. In this game, you are in a hellish world. You must find your way out before it's too late (i.e your time runs out and you die X/ ). Random things increase your time so find out what they are. Be careful, be cautious, and be smart.
 <br><br>
-_A helpful tip_: Stay away from the red things.
+Remember: The world moves faster than you think heheheheheheheheh.
 
 Reflections can be found in [Reflection.md](Reflection.md)
 
