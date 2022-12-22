@@ -2,8 +2,7 @@ package mainGaim;
 import java.util.Scanner;
 import mainGaim.Main;
 
-
-
+/* Commands is a class that contains all the commands that the player can use in the game */
 public class Commands {
     //defining Buildings
     Building center = new Building("Spunkoids", "Woodlands of the Spirits", 1);
@@ -12,6 +11,11 @@ public class Commands {
     House hauntedHouse = new House("Haunted House", "A tall house full of ghosts", 5, true, true);
     Cafe frogCafe = new Cafe("Frog Cafe", "A cafe full of hoppity hoppities", 1, 50, 20, 300, 60);
 
+    /**
+     * Calls the command that the user inputs in gaim
+     * @param command command to be called
+     * @param player player who is calling the command
+     */
     public static void call(String command, Player player) {
         Main main = new Main();
         Scanner input = new Scanner(System.in);

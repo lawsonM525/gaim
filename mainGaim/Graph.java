@@ -7,6 +7,7 @@ package mainGaim;
  
 import java.util.*;
  
+/* Graph class represents a graph that is used for the map of the gaim world */
 class Graph<T> {
  
     // We use Hashmap to store the edges in the graph

@@ -1,4 +1,6 @@
 package mainGaim;
+
+/* Item is an object that can be picked up and used by the player */
 public class Item {
     public String name;
     public String description;

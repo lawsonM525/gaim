@@ -1,7 +1,7 @@
 package mainGaim;
 import javax.management.RuntimeErrorException;
 
-/* Building clas defines all buildings in a World */
+/* Building class defines all buildings in a World */
 public class Building {
 
     protected String name;
@@ -40,10 +40,12 @@ public class Building {
         return this.name;
     }
 
+    /* Get the definition of this building */
     public String getDefinition() {
         return this.definition;
     }
 
+    /* Get the number of floors in this building */
     public int getFloors() {
         return this.nFloors;
     }
@@ -58,6 +60,7 @@ public class Building {
         return this; // Return a pointer to the current building
     }
 
+    /* Leave the building */
     public Building exit() {
         if (this.activeFloor == -1) {
             throw new RuntimeException("You are not inside this Building. Must call enter() before exit().");
@@ -70,6 +73,7 @@ public class Building {
         return null; // We're outside now, so the building is null
     }
 
+    /* Go to a specific floor */
     public void goToFloor(int floorNum) {
         if (this.activeFloor == -1) {
             throw new RuntimeException("You are not inside this Building. Must call enter() before navigating between floors.");
@@ -80,19 +84,23 @@ public class Building {
         System.out.println("You are now on floor #" + floorNum + " of " + this.name);
         this.activeFloor = floorNum;
     }
-
+    
+    /* Go up a floor */
     public void goUp() {
         this.goToFloor(this.activeFloor + 1);
     }
 
+    /* Go down a floor */
     public void goDown() {
         this.goToFloor(this.activeFloor - 1);
     }
 
+    /* Show available options */
     public void showOptions() {
         System.out.println("Available options at " + this.name + ":\n + enter() \n + exit() \n + goUp() \n + goDown()\n + goToFloor(n)");
     }
 
+    /* toString() method */
     public String toString() {
         return this.name + " is a " + this.nFloors + "-story building located at " + this.definition + ".";
     }

@@ -1,11 +1,17 @@
 package mainGaim;
 import java.util.Scanner;
+
+/* Task class defines tasks that the player can complete */
 public class Task {
     public static Scanner keyboard = new Scanner(System.in);
     public static Scanner input = new Scanner(System.in);
 
     //Creating a random number generator 
     //Task for the user to guess the random generated number
+    /**
+     * Task 1: Guess the number
+     * @param player player who is completing this task
+     */
     public static void Task_1(Player player){
         int min = 1;
         int max = 9;
@@ -28,6 +34,10 @@ public class Task {
         } 
     }
 
+    /**
+     * Task 2: Higher or lower
+     * @param player player who is completing this task
+     */
     public static void Task_2(Player player){
         int min = 1;
         int max = 9;
@@ -103,6 +113,10 @@ public class Task {
 
     }
 
+    /**
+     * Task 3: Math quiz
+     * @param player player who is completing this task
+     */
     public static void Task_3(Player player){    
         // Math quiz game which generates random numbers to create random questions
         int min = 10;

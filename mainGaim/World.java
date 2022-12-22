@@ -1,6 +1,6 @@
 package mainGaim;
 import java.util.ArrayList;
-/** World classdefines world map and buildings in the world */
+/** World class defines world map and buildings in the world */
 public class World {
     public String name;//name of the world
     public ArrayList<Building> buildings;//list of buildings in the world
